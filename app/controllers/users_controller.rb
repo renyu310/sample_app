@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     if @user.save
       #成功情况
       #闪现页面
+      log_in @user
       flash[:success] = "欢迎来到示例App!"
       #重定向页面 redirect_to user——url(@user)
       redirect_to @user
